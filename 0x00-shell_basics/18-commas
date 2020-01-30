@@ -1,2 +1,3 @@
 #!/bin/bash
-ls -l -a -v -1 --format=commas
+ls -l -a -v --format=commas
+\n
