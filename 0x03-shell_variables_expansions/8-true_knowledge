@@ -1,2 +1,2 @@
 #!/bin/bash
-delcare i=$TRUEKNOWLEDGE | echo $((i + 128))
+echo $(($TRUEKNOWLEDGE + 128))
