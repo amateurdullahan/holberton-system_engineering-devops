@@ -1,2 +1,2 @@
 #!/bin/bash
-export BREATH=420 LOVE=69 | echo $(($BREATH ** $LOVE))
+export BREATH=4 LOVE=6 | echo $(($BREATH**$LOVE))
