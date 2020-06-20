@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# display directory contents in list
+for c in $(find ./* | cut -d'-' -f2 | tr -d './'); do
+    echo "$c"
+done
