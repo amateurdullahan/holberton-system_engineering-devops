@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# print unlucky bunbers
 i=1
 while [ $i -le 20 ]; do
 
