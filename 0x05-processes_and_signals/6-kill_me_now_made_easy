@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# the king is dead, long live the king
+pkill -f "./4-to_infinity_and_beyond"

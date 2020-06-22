@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# never seen this movie
+trap "echo 'I am invincible!!!'" SIGTERM
+while ((1)); do echo "To infinity and beyond"; sleep 2; done
