@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# genewatin a new kwey
+ssh-keygen -b 4096 -n betty -f holberton
