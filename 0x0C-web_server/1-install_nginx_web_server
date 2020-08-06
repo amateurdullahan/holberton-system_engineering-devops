@@ -1,4 +1,4 @@
-#!/usr/bin/evn bash
+#!/usr/bin/env bash
 # install
 sudo apt-get update
 sudo apt-get -y install nginx
