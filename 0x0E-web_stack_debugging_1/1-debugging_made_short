@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# buggy
+sudo mv /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx restart
