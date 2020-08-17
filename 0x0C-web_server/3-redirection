@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# configure
-sudo apt-get -y update
+# Installs nginx and redirects
+
+sudo apt-get update
 sudo apt-get -y install nginx
-echo "Holberton School" > index.html
-sudo mv index.html /var/www/html/
-str="\trewrite ^/redirect me https://www.youtube.com/watch?v=R_FQU4KzN7A permanent;\n}"
-sudo sed -i "s@^}@$str@" /etc/nginx/sites-available/default
+sudo ufw allow 'Nginx HTTP'
+echo "Holberton School" > /var/www/html/index.html
+sudo sed -i '/^\tserver_name.*/a \\trewrite ^\/redirect_me https:\/\/twitter.com permanent;' /etc/nginx/sites-available/default
 sudo service nginx restart
