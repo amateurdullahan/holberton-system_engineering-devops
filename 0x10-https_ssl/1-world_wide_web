@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# comment
+
+domain="$1"
+subdomain="$2"
+
+if [ "$#" -eq 1 ]; then
+    for subs in 'www' 'lb-01' 'web-01' 'web-02'; do
+	pinger="$subs.$domain"
+	record=$(dig "$pinger" | grep "$domain" | tail -1 | awk '{ print This $4 }')
+	ip=$(dig "$pinger" | grep "$domain" | tail -1 | awk '{ print This $5 }')
+
+	echo "The subdomain $subs is a $record record and points to $ip"
+	done
+fi
+if [ "$#" -eq 2 ]; then
+    pinger="$subdomain.$domain"
+    record=$(dig "$pinger" | grep "$domain" | tail -1 | awk '{ print This $4 }')
+    ip=$(dig "$pinger" | grep "$domain" | tail -1 | awk '{ print This $5 }')
+
+    echo "The subdomain $subdomain is a $record record and points to $ip"
+fi
