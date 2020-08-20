@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# comment
+service nginx stop
+sed -i '1s/^/user nginx;\n/' /etc/nginx/nginx.conf
+service nginx restart
